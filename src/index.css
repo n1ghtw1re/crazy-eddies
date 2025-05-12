@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: theme('colors.cyber-black');
+  color: white;
+  font-family: theme('fontFamily.cyber');
+}
+
+:root {
+  --scanline-height: 2px;
+  --scanline-opacity: 0.15;
+}
+
+@layer components {
+  .cyber-btn {
+    @apply relative overflow-hidden border-2 border-cyber-pink bg-cyber-black px-5 py-2 font-glitch text-lg uppercase text-cyber-pink transition-all hover:bg-cyber-pink hover:text-black
+           shadow-[0_0_10px_theme(colors.cyber-pink)]
+           animate-[flicker_3s_infinite];
+  }
+  
+  .cyber-btn::before {
+    @apply absolute inset-0 bg-cyber-pink opacity-0 transition-opacity content-[''];
+  }
+  
+  .cyber-btn:hover::before {
+    @apply opacity-20;
+  }
+  
+  .cyber-input {
+    @apply bg-cyber-dark border-2 border-cyber-blue text-cyber-blue p-2 focus:outline-none focus:ring-1 focus:ring-cyber-pink
+           shadow-[0_0_8px_theme(colors.cyber-blue)];
+  }
+  
+  .noise {
+    @apply pointer-events-none fixed inset-0 z-50 opacity-[0.03] bg-[url('/noise.png')];
+  }
+  
+  .scanlines {
+    @apply pointer-events-none fixed inset-0 z-50 overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,0.5)_50%)] before:bg-[length:100%_4px] before:opacity-20;
+  }
+  
+  .crt-effect {
+    @apply relative overflow-hidden
+           before:absolute before:pointer-events-none before:inset-0 before:z-10
+           before:bg-gradient-to-b before:from-transparent before:via-transparent before:to-cyber-black before:opacity-70
+           before:mix-blend-overlay;
+  }
+  
+  .glitch-text {
+    @apply animate-glitch;
+  }
+  
+  .neon-text {
+    @apply text-cyber-pink;
+    text-shadow: 0 0 5px theme('colors.cyber-pink'),
+                 0 0 10px theme('colors.cyber-pink'),
+                 0 0 20px theme('colors.cyber-pink');
+  }
+  
+  .neon-box {
+    @apply border-cyber-blue;
+    box-shadow: 0 0 10px theme('colors.cyber-blue'),
+                inset 0 0 10px theme('colors.cyber-blue');
+  }
+  
+  .price-tag {
+    @apply relative inline-block py-1 px-3 font-bold text-black bg-cyber-yellow
+           before:absolute before:-left-3 before:top-0 before:border-r-[12px] before:border-r-cyber-yellow
+           before:border-t-[12px] before:border-t-transparent before:border-b-[12px] before:border-b-transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.cyber-black');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.cyber-pink');
+  border: 1px solid theme('colors.cyber-blue');
+}
+
+/* News ticker */
+.news-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

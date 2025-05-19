@@ -1,37 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapPin, Shield, ZapOff } from 'lucide-react';
 
 export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    codename: '',
-    contact: '',
-    message: '',
-    securityCheck: false,
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setFormData(prev => ({ ...prev, [name]: checked }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // This would normally submit the form data, but we'll just simulate it
-    console.log('Form data submitted:', formData);
-    alert('MESSAGE SENT TO EDDIE\'S SECURE DROP! He\'ll contact you if he feels like it.');
-    setFormData({
-      codename: '',
-      contact: '',
-      message: '',
-      securityCheck: false,
-    });
-  };
-
   return (
     <div>
       {/* Header */}
@@ -98,95 +68,36 @@ export const Contact: React.FC = () => {
           </div>
         </div>
         
-        {/* Contact Form */}
+        {/* Secure Data Drop */}
         <div className="bg-cyber-dark border-2 border-cyber-green p-6 rounded-lg">
           <h2 className="font-display text-2xl text-cyber-green mb-4 flex items-center">
             <Shield size={20} className="mr-2" />
             SECURE DATA DROP
           </h2>
           
-          <p className="font-cyber text-white mb-6">
-            Not feeling like a physical visit? Drop Eddie a secure message. 
-            <span className="text-cyber-yellow block mt-2">
-              Just remember: he only responds to interesting opportunities.
-            </span>
-          </p>
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="codename" className="block font-cyber text-cyber-blue text-sm mb-1">
-                YOUR CODENAME:
-              </label>
-              <input
-                type="text"
-                id="codename"
-                name="codename"
-                value={formData.codename}
-                onChange={handleChange}
-                required
-                className="cyber-input w-full"
-                placeholder="ENTER ALIAS HERE"
-              />
-            </div>
+          <div className="space-y-4">
+            <p className="font-cyber text-white">
+              Need to reach Eddie without leaving a trace? Drop him a line at:
+            </p>
             
-            <div>
-              <label htmlFor="contact" className="block font-cyber text-cyber-blue text-sm mb-1">
-                SECURE CONTACT METHOD:
-              </label>
-              <input
-                type="text"
-                id="contact"
-                name="contact"
-                value={formData.contact}
-                onChange={handleChange}
-                required
-                className="cyber-input w-full"
-                placeholder="ENCRYPTED CHANNEL PREFERRED"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block font-cyber text-cyber-blue text-sm mb-1">
-                YOUR MESSAGE:
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                className="cyber-input w-full resize-none"
-                placeholder="KEEP IT BRIEF AND INTERESTING"
-              ></textarea>
-            </div>
-            
-            <div className="flex items-start">
-              <input
-                type="checkbox"
-                id="securityCheck"
-                name="securityCheck"
-                checked={formData.securityCheck}
-                onChange={handleCheckboxChange}
-                required
-                className="mt-1 mr-2"
-              />
-              <label htmlFor="securityCheck" className="font-cyber text-cyber-pink text-sm">
-                I confirm I am not affiliated with any corporation, law enforcement agency, 
-                or other organization that would make Eddie nervous. I also acknowledge that 
-                Eddie may choose to ignore this message entirely.
-              </label>
-            </div>
-            
-            <div className="text-center pt-4">
-              <button type="submit" className="cyber-btn w-full sm:w-auto">
-                TRANSMIT DATA
-              </button>
-              <p className="font-cyber text-cyber-green text-xs mt-2">
-                * ALL CHANNELS ENCRYPTED. PROBABLY.
+            <div className="bg-cyber-black p-4 rounded-lg border border-cyber-blue animate-pulse">
+              <p className="font-glitch text-cyber-blue text-center text-lg">
+                n1ghtw1re@proton.me
               </p>
             </div>
-          </form>
+            
+            <p className="font-cyber text-cyber-pink text-sm">
+              Don't worry about spam - Eddie's too busy dodging corp surveillance to send newsletters.
+              Plus, he can barely remember how to check his email most days.
+            </p>
+            
+            <div className="bg-cyber-black p-4 rounded border border-cyber-yellow mt-4">
+              <p className="font-cyber text-cyber-yellow text-sm">
+                <span className="font-bold">PRO TIP:</span> Mention "SynthBrew" in your message and 
+                Eddie might respond faster. He's got a weakness for that stuff.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -298,6 +209,54 @@ export const Contact: React.FC = () => {
             className="cyber-btn text-sm border-cyber-blue text-cyber-blue hover:bg-cyber-blue"
           >
             INTERLINKED RECORDS
+          </a>
+          <a 
+            href="https://code-heroes.lovable.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-green text-cyber-green hover:bg-cyber-green"
+          >
+            CODEHEROES
+          </a>
+          <a 
+            href="https://the-hackers-tarot.lovable.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-yellow text-cyber-yellow hover:bg-cyber-yellow"
+          >
+            HACKER'S TAROT
+          </a>
+          <a 
+            href="https://n1ghtw1re-studios.lovable.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-purple text-cyber-purple hover:bg-cyber-purple"
+          >
+            N1GHTW1RE STUDIOS
+          </a>
+          <a 
+            href="https://tech-noir.netlify.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-orange text-cyber-orange hover:bg-cyber-orange"
+          >
+            TECH NOIR
+          </a>
+          <a 
+            href="https://thedonstone.lovable.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-pink text-cyber-pink hover:bg-cyber-pink"
+          >
+            THEDONSTONE
+          </a>
+          <a 
+            href="https://vinyl-violence.netlify.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-blue text-cyber-blue hover:bg-cyber-blue"
+          >
+            VINYL VIOLENCE
           </a>
         </div>
       </div>

@@ -5,6 +5,9 @@ import { Products } from './pages/Products';
 import { Blog } from './pages/Blog';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
+import { Disclaimer } from './pages/Disclaimer';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="cyberdeck-chaos" element={<Blog />} />
         <Route path="about-eddie" element={<About />} />
         <Route path="find-the-hideout" element={<Contact />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="disclaimer" element={<Disclaimer />} />
       </Route>
     </Routes>
   );

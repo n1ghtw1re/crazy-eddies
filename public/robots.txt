@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eddies.n1ghtw1re.com/sitemap.xml

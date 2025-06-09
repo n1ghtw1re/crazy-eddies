@@ -147,7 +147,7 @@ export const Contact: React.FC = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 relative z-10">
           <a 
-            href="https://n1ghtw1re.neocities.org" 
+            href="https://n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-blue text-cyber-blue hover:bg-cyber-blue"
@@ -171,6 +171,22 @@ export const Contact: React.FC = () => {
             GUMROAD
           </a>
           <a 
+            href="https://bpm.n1ghtw1re.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-pink text-cyber-pink hover:bg-cyber-pink"
+          >
+            BPM Replicant Boutique
+          </a>
+          <a 
+            href="https://2a.n1ghtw1re.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-pink text-cyber-pink hover:bg-cyber-pink"
+          >
+            2nd Amendment Gun Emporium
+          </a>
+          <a 
             href="https://github.com/n1ghtw1re" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -179,7 +195,15 @@ export const Contact: React.FC = () => {
             GITHUB
           </a>
           <a 
-            href="https://synapse-express.netlify.app" 
+            href="https://ellos-viven.n1ghtw1re.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cyber-btn text-sm border-cyber-pink text-cyber-pink hover:bg-cyber-pink"
+          >
+            Ellos Viven Optical
+          </a>
+          <a 
+            href="https://synapse.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-purple text-cyber-purple hover:bg-cyber-purple"
@@ -187,7 +211,7 @@ export const Contact: React.FC = () => {
             SYNAPSE EXPRESS
           </a>
           <a 
-            href="https://taco-bell-sanangeles.netlify.app" 
+            href="https://taco-bell.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-orange text-cyber-orange hover:bg-cyber-orange"
@@ -195,7 +219,7 @@ export const Contact: React.FC = () => {
             TACO BELL SANANGELES
           </a>
           <a 
-            href="https://into-ideaspace.lovable.app" 
+            href="https://ideaspace.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-pink text-cyber-pink hover:bg-cyber-pink"
@@ -203,7 +227,7 @@ export const Contact: React.FC = () => {
             INTO IDEASPACE
           </a>
           <a 
-            href="https://interlinked-records.lovable.app" 
+            href="https://interlinked.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-blue text-cyber-blue hover:bg-cyber-blue"
@@ -211,7 +235,7 @@ export const Contact: React.FC = () => {
             INTERLINKED RECORDS
           </a>
           <a 
-            href="https://code-heroes.lovable.app" 
+            href="https://code-heroes.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-green text-cyber-green hover:bg-cyber-green"
@@ -219,7 +243,7 @@ export const Contact: React.FC = () => {
             CODEHEROES
           </a>
           <a 
-            href="https://the-hackers-tarot.lovable.app" 
+            href="https://hackers-tarot.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-yellow text-cyber-yellow hover:bg-cyber-yellow"
@@ -227,7 +251,7 @@ export const Contact: React.FC = () => {
             HACKER'S TAROT
           </a>
           <a 
-            href="https://n1ghtw1re-studios.lovable.app" 
+            href="https://studio.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-purple text-cyber-purple hover:bg-cyber-purple"
@@ -235,7 +259,7 @@ export const Contact: React.FC = () => {
             N1GHTW1RE STUDIOS
           </a>
           <a 
-            href="https://tech-noir.netlify.app" 
+            href="https://technoir.n1ghtw1re.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-orange text-cyber-orange hover:bg-cyber-orange"
@@ -243,7 +267,7 @@ export const Contact: React.FC = () => {
             TECH NOIR
           </a>
           <a 
-            href="https://thedonstone.lovable.app" 
+            href="https://thedonstone.n1ghtw1re" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-pink text-cyber-pink hover:bg-cyber-pink"
@@ -251,7 +275,7 @@ export const Contact: React.FC = () => {
             THEDONSTONE
           </a>
           <a 
-            href="https://vinyl-violence.netlify.app" 
+            href="https://vinyl-violence.n1ghtw1re" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cyber-btn text-sm border-cyber-blue text-cyber-blue hover:bg-cyber-blue"

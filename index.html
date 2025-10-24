@@ -31,24 +31,48 @@
     <meta name="twitter:image" content="https://eddies.n1ghtw1re.com/eddieshero.jpg" />
     
     <script>
-function loadUmami() {
-  const script = document.createElement('script');
-  script.async = true;
-  script.defer = true;
-  script.src = 'https://cloud.umami.is/script.js';
-  script.setAttribute('data-website-id', '29fdb5a8-8c1a-42a5-9b24-e8c1e86b5396');
+(function() {
+  const websiteId = '29fdb5a8-8c1a-42a5-9b24-e8c1e86b5396';
+  let scriptLoaded = false;
   
-  script.onload = () => console.log('✅ Umami loaded successfully');
-  script.onerror = () => console.error('❌ Umami loading failed');
+  function loadScript(src, isLocalFallback = false) {
+    if (scriptLoaded) return;
+    
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = src;
+    script.setAttribute('data-website-id', websiteId);
+    
+    script.onload = function() {
+      scriptLoaded = true;
+      console.log(isLocalFallback ? '✅ Local analytics loaded' : '✅ Remote analytics loaded');
+    };
+    
+    script.onerror = function() {
+      if (!isLocalFallback) {
+        console.warn('Remote analytics blocked, trying local fallback...');
+        // Try local fallback
+        setTimeout(() => loadScript('/analytics.js', true), 500);
+      } else {
+        console.warn('Analytics unavailable');
+      }
+    };
+    
+    document.head.appendChild(script);
+  }
   
-  document.head.appendChild(script);
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadUmami);
-} else {
-  loadUmami();
-}
+  function initAnalytics() {
+    // Try remote first
+    loadScript('https://cloud.umami.is/script.js');
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAnalytics);
+  } else {
+    initAnalytics();
+  }
+})();
     </script>
   </head>
   <body class="bg-cyber-black text-white overflow-x-hidden">

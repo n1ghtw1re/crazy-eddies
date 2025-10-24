@@ -31,13 +31,24 @@
     <meta name="twitter:image" content="https://eddies.n1ghtw1re.com/eddieshero.jpg" />
     
     <script>
-      (function() {
-        var script = document.createElement('script');
-        script.defer = true;
-        script.src = 'https://cloud.umami.is/script.js';
-        script.setAttribute('data-website-id', '29fdb5a8-8c1a-42a5-9b24-e8c1e86b5396');
-        document.head.appendChild(script);
-      })();
+function loadUmami() {
+  const script = document.createElement('script');
+  script.async = true;
+  script.defer = true;
+  script.src = 'https://cloud.umami.is/script.js';
+  script.setAttribute('data-website-id', '29fdb5a8-8c1a-42a5-9b24-e8c1e86b5396');
+  
+  script.onload = () => console.log('✅ Umami loaded successfully');
+  script.onerror = () => console.error('❌ Umami loading failed');
+  
+  document.head.appendChild(script);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadUmami);
+} else {
+  loadUmami();
+}
     </script>
   </head>
   <body class="bg-cyber-black text-white overflow-x-hidden">

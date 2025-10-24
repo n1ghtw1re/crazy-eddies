@@ -31,26 +31,30 @@ export const Privacy: React.FC = () => {
 
           <h2 className="font-display text-xl text-cyber-pink mt-6">DATA COLLECTION</h2>
           <p className="font-cyber text-white">
-            Eddie doesn't collect data because he can't remember how databases work. 
-            Any information you provide is immediately forgotten (probably).
+            Eddie uses privacy-focused analytics (Umami) to see if anyone actually visits 
+            his shop. It's like having a motion detector, but for websites. No personal 
+            data is collected - Eddie can't even remember your name five minutes after you leave.
           </p>
 
           <h2 className="font-display text-xl text-cyber-pink mt-6">DATA STORAGE</h2>
           <p className="font-cyber text-white">
             Storage? What storage? Eddie keeps everything in his head, which means 
-            it's probably safer than any corp database.
+            it's probably safer than any corp database. Website analytics are handled 
+            by Umami, which is more privacy-conscious than Eddie is about his stash locations.
           </p>
 
           <h2 className="font-display text-xl text-cyber-pink mt-6">COOKIES</h2>
           <p className="font-cyber text-white">
-            We use cookies because Eddie likes snacks. Digital ones too. They help 
-            remember your shopping cart (when the system works).
+            We use minimal cookies because Eddie likes snacks. Digital ones too. They help 
+            remember your shopping cart (when the system works) and basic site functionality. 
+            No tracking cookies - Eddie's too paranoid for that corpo nonsense.
           </p>
 
           <h2 className="font-display text-xl text-cyber-pink mt-6">THIRD PARTIES</h2>
           <p className="font-cyber text-white">
             Eddie doesn't share your data with anyone. Not because of privacy concerns, 
-            but because he's paranoid about corps.
+            but because he's paranoid about corps. We use Umami for analytics, which 
+            is privacy-focused and doesn't sell data to corporate overlords.
           </p>
 
           <div className="bg-cyber-black p-4 rounded border border-cyber-yellow mt-6">
